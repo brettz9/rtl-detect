@@ -2,11 +2,13 @@
   "name": "rtl-detect",
   "version": "1.0.2",
   "description": "Library will help you to detect if the locale is right-to-left language.",
-  "main": "index.js",
+  "main": "dist/index-umd.js",
+  "module": "dist/index-es.js",
   "contributors": [
     "Brett Zamir"
   ],
   "scripts": {
+    "rollup": "rollup -c",
     "lint": "grunt eslint",
     "test": "grunt test"
   },
@@ -44,8 +46,17 @@
       "url": "https://github.com/shadiabuhilal/rtl-detect/blob/master/LICENSE.md"
     }
   ],
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
     "chai": "^4.2.0",
     "eslint-plugin-require-jsdoc": "^1.0.4",
     "grunt": "^1.0.3",
@@ -53,6 +64,9 @@
     "grunt-contrib-clean": "^2.0.0",
     "grunt-eslint": "^21.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "rollup": "^0.67.4",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-terser": "^3.0.0"
   }
 }

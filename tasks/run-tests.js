@@ -2,7 +2,7 @@
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
-'use strict';
+
 
 var path = require('path');
 var childProcess = require('child_process');
@@ -40,9 +40,13 @@ module.exports = function (grunt) {
             mochaPath = path.join(base, 'mocha/bin/_mocha');
         }
 
-        args.push(mochaPath);
-        args.push('--reporter');
-        args.push('spec');
+        args.push(
+            mochaPath,
+            '--reporter',
+            'spec',
+            '--require',
+            '@babel/register'
+        );
 
         var testFiles = ['./test/*.js', './test/**/*.js'];
         var files = grunt.file.expand(testFiles);

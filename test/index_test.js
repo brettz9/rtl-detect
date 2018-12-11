@@ -2,9 +2,9 @@
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
  */
-'use strict';
 
-var RtlDetect = require('../' + 'index');
+
+import * as RtlDetect from '../src/rtl-detect.js';
 
 var assert = require('chai').assert;
 
