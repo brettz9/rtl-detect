@@ -1,3 +1,4 @@
+/* eslint-disable one-var, sort-vars */
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -6,11 +7,9 @@
 
 var RtlDetect = require('../../' + 'lib/rtl-detect');
 
-var assert = require('chai').assert;
+describe('rtl-detect', function () {
 
-describe('rtl-detect', function() {
-
-    describe('private', function() {
+    describe('private', function () {
 
         it('_escapeRegExpPattern()', function () {
             var strIn, out;

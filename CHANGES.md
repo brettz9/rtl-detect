@@ -1,0 +1,3 @@
+# rtl-detect CHANGES
+
+## ?
